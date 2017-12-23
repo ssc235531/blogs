@@ -4,13 +4,13 @@
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
             <h1>增加接口文档</h1>
 
-            <el-form-item label="标题" prop="title">
+            <el-form-item label="标题555" prop="title">
                 <el-input style="width:200px" v-model="ruleForm.title"></el-input>
             </el-form-item>
-            <el-form-item label="接口地址" prop="url">
+            <el-form-item label="接口地址777" prop="url">
                 <el-input style="width:200px" v-model="ruleForm.url"></el-input>
             </el-form-item>
-            <el-form-item label="类型" prop="backorfont">
+            <el-form-item label="类型jjjj" prop="backorfont">
                 <el-select v-model="ruleForm.backorfont" placeholder="请选择">
                     <el-option label="前台接口" value="前台接口"></el-option>
                     <el-option label="后台接口" value="后台接口"></el-option>
@@ -78,7 +78,7 @@ export default {
             }
         }
     },
-    
+
     methods:{
         submitForm(formName) {
             this.$refs[formName].validate((valid) => {
@@ -88,7 +88,7 @@ export default {
                     this.axios.post('/api/apilist/', this.ruleForm)
                         .then(function(response) {
                             switch(response.data.code){
-                                case "2001" : 
+                                case "2001" :
                                 // alert("添加失败")
                                 _this.$message({
                                     showClose:true,
@@ -100,7 +100,7 @@ export default {
                                _this.$message({
                                    showClose:true,
                                    message:"成功",
-                                   type:"success" 
+                                   type:"success"
                                })
                                 break;
                             }
